@@ -1,0 +1,32 @@
+.socials {
+  position: fixed;
+  bottom: 50%;
+  right: 2%;
+  -webkit-transform: translate(0%, 40%);
+          transform: translate(0%, 40%);
+}
+
+.socials .socials--list {
+  list-style: none;
+}
+
+.socials .socials--list li {
+  margin: 15px 0px;
+  padding: 3px 0px;
+}
+
+.socials .socials--list li a {
+  color: #00171F;
+  font-size: 1.1em;
+  padding: 8px 11px;
+  text-align: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.socials .socials--list li a:hover {
+  color: #f5f5f5;
+  border-radius: 100%;
+  background-color: #003459;
+}
+/*# sourceMappingURL=Socials.css.map */

@@ -1,0 +1,33 @@
+.about {
+  min-height: 90vh;
+  background-color: #f5f5f5;
+  padding-top: 100px;
+  color: #00171f;
+  .about--info {
+    h2 {
+      margin-top: 0px;
+    }
+    p {
+      width: 100%;
+      line-height: 1.8;
+    }
+
+    .about--info__list {
+      margin-top: 50px;
+      h3 {
+        color: #008AB8;
+      }
+      display: flex;
+      justify-content: space-between;
+      .about--info__technologies,
+      .about--info__architectures {
+        ul {
+          font-size: 1.1em;
+          li {
+            padding: 5px 0px;
+          }
+        }
+      }
+    }
+  }
+}

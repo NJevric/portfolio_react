@@ -1,0 +1,53 @@
+.contact {
+  min-height: 90vh;
+  background-color: #f5f5f5;
+  position: relative;
+
+  .contact--info {
+    color: #f5f5f5;
+    background-color: #007AA3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    padding:150px 0px;
+    h2 {
+      margin-top: 0px;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      width: 75%;
+      margin: 0px auto;
+      line-height: 1.8;
+    }
+    .contact--info__button {
+      display: flex;
+      padding-top: 30px;
+
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      a {
+        color: #f5f5f5;
+        transition: 0.5s ease;
+        &:hover {
+          .line {
+            width: 100px;
+          }
+          color: #003459;
+        }
+        .line {
+          height: 2px;
+          width: 30px;
+          background: #003459;
+          margin: 0px auto;
+          margin-top: 10px;
+          transition: 0.4s ease;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.project {
+  padding: 70px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
+.project:nth-of-type(2n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.project:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.project:hover .project--image {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.project .project--image {
+  width: 45%;
+  height: 45%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.project .project--info {
+  width: 50%;
+}
+
+.project .project--info h3 {
+  color: #f5f5f5;
+  margin-top: 0px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.project .project--info p {
+  width: 100%;
+  font-size: 1em;
+}
+
+.project .project--info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+  margin-bottom: 30px;
+}
+
+.project .project--info ul li {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  color: #f5f5f5;
+  margin-right: 20px;
+}
+
+.project .project--info ul li:last-of-type {
+  margin-right: 0px;
+}
+
+.project .project--info .project--info__links a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #00171f;
+  color: #f5f5f5;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.project .project--info .project--info__links a:nth-of-type(1) {
+  margin-right: 20px;
+}
+
+.project .project--info .project--info__links a:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#003459), to(#003459)) #003459 no-repeat 0 0;
+  background: linear-gradient(#003459, #003459) #003459 no-repeat 0 0;
+  background-size: 0 100%;
+  border-radius: 50px;
+  -webkit-animation: fill_button 0.5s linear 1 forwards;
+          animation: fill_button 0.5s linear 1 forwards;
+}
+/*# sourceMappingURL=Project.css.map */

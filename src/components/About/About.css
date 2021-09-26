@@ -1,0 +1,40 @@
+.about {
+  min-height: 90vh;
+  background-color: #f5f5f5;
+  padding-top: 100px;
+  color: #00171f;
+}
+
+.about .about--info h2 {
+  margin-top: 0px;
+}
+
+.about .about--info p {
+  width: 100%;
+  line-height: 1.8;
+}
+
+.about .about--info .about--info__list {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about .about--info .about--info__list h3 {
+  color: #008AB8;
+}
+
+.about .about--info .about--info__list .about--info__technologies ul,
+.about .about--info .about--info__list .about--info__architectures ul {
+  font-size: 1.1em;
+}
+
+.about .about--info .about--info__list .about--info__technologies ul li,
+.about .about--info .about--info__list .about--info__architectures ul li {
+  padding: 5px 0px;
+}
+/*# sourceMappingURL=About.css.map */

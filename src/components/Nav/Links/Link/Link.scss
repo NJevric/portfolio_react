@@ -1,0 +1,16 @@
+.link{
+    list-style: none;
+    padding:0px 20px;
+    a{
+        color:#f3f3f3;
+        text-decoration: none;
+        transition: .5s ease;
+        
+        &:hover{
+            color:#003459;
+      
+        }
+        font-size: 1.15em;
+    }
+    
+}

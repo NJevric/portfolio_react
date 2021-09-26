@@ -1,0 +1,47 @@
+.header {
+  min-height: 70vh;
+  background-color: #008AB8;
+  background-color: #007AA3;
+  color: #f3f3f3;
+  .wrapper {
+    .header--text {
+      padding-top: 150px;
+      h1 {
+        margin-top: 0px;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 30px;
+        width: 65%;
+        line-height: 1.6;
+      }
+      .header--text__buttons {
+        display: flex;
+        a {
+          &:nth-of-type(1) {
+            margin-right: 25px;
+            background-color: #003459;
+          }
+          border: 2px solid #003459;
+          padding: 10px 20px;
+          color: #f3f3f3;
+          transition: 0.5s ease;
+          border-radius: 50px;
+
+          &:hover {
+            color: #f3f3f3;
+            background: linear-gradient(#003459, #003459) #007AA3 no-repeat 0 0;
+            background-size: 0 100%;
+            border-radius: 50px;
+            animation: fill_button 0.5s linear 1 forwards;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes fill_button {
+  to {
+    background-size: 100% 100%;
+  }
+}
