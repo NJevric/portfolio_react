@@ -26,3 +26,39 @@ p{
     font-size:1.05em;
 }
 
+.darkMode{
+    
+    .header,.nav,.projects{
+        background-color: #121212;
+    }
+    .contact{
+        .wrapper{
+            .contact--info{
+                background-color: #121212;
+            }
+        }
+    }
+    .about,.contact,.footer{
+        background-color: #181818;
+        color:#f5f5f5;
+    }
+    .projects{
+        .wrapper{
+            .project{
+                &:hover{
+                    background-color: rgba($color: #255, $alpha: 0.2);
+                }
+            }
+        }
+    }
+    .socials{
+        a{
+            i{
+                color:#f5f5f5;
+            }
+        }
+       
+      
+    }
+}
+

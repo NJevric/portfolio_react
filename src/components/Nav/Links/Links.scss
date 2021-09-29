@@ -1,5 +1,14 @@
-.links{
-    display: flex;
-   
-    
+.links {
+  display: flex;
+}
+.nav--links {
+  display: flex;
+  i {
+    color: #f5f5f5;
+    margin-top: 21px;
+    margin-left: 15px;
+    &:hover {
+      color: #003459;
+    }
+  }
 }

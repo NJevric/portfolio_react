@@ -3,4 +3,20 @@
   display: -ms-flexbox;
   display: flex;
 }
+
+.nav--links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav--links i {
+  color: #f5f5f5;
+  margin-top: 21px;
+  margin-left: 15px;
+}
+
+.nav--links i:hover {
+  color: #003459;
+}
 /*# sourceMappingURL=Links.css.map */

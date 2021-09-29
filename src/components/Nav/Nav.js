@@ -2,10 +2,9 @@ import React from "react";
 import "./Nav.css";
 import Logo from "./Logo/Logo";
 import Links from "./Links/Links";
-const Nav = () => {
 
-  
-
+const Nav = (props) => {
+ 
   const links = [
     {
       id: 1,
@@ -27,20 +26,18 @@ const Nav = () => {
       href: "#",
       text: "Contact",
     },
-    // {
-    //   id: 5,
-    //   href: "#",
-    //   text: <i class="far fa-moon"></i>,
-    // }
   ];
 
+ 
+  const b = (data) => {
+    props.onA(data);
+  }
   return (
-    <div className="nav">
+    <div className={`nav`}>
       <div className="wrapper">
-      <Logo />
-      <Links links={links} />
+        <Logo />
+        <Links links={links} onB={b}/>
       </div>
-  
     </div>
   );
 };
