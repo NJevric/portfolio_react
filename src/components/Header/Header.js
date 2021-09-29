@@ -1,5 +1,17 @@
+import { useState } from "react";
 import "./Header.css";
-const Header = () => {
+import Cv from "./Cv/Cv";
+const Header = (props) => {
+
+  const[openedValue,setOpenedValue] = useState(false);
+  const openHandler = () =>{
+    console.log('open');
+    setOpenedValue(true);
+  }
+  const closedHandler = (data) => {
+    console.log(data);
+    setOpenedValue(false);
+  }
   return (
     <div className="header">
       <div className="wrapper">
@@ -10,10 +22,11 @@ const Header = () => {
           </p>
           <div className="header--text__buttons">
             <a href="#">Get in touch</a>
-            <a href="#">Download CV</a>
+            <a href="#" onClick={openHandler}>Download CV</a>
           </div>
         </div>
       </div>
+      <Cv open={openedValue} onOpen={closedHandler}/>
     </div>
   );
 };

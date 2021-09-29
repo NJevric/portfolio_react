@@ -7,7 +7,6 @@ import Socials from "./components/Socials/Socials";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-
 function App() {
 
   const [dark,setDark] = useState(true);
@@ -24,6 +23,7 @@ function App() {
       <Contact className="contact"/>
       <Footer className="footer"/>
       <Socials className="socials"/>
+     
     </div>
   );
 }
