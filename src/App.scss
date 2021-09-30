@@ -1,3 +1,4 @@
+@import "assets/variables/variables.scss";
 .link,p{
     font-family: 'Montserrat', sans-serif;
 }
@@ -25,28 +26,32 @@ p{
     letter-spacing: .5px;
     font-size:1.05em;
 }
-
+.app{
+    position: relative;
+}
 .darkMode{
     
     .header,.nav,.projects{
-        background-color: #121212;
+        background-color: #000C14;
+        
     }
     .contact{
         .wrapper{
             .contact--info{
-                background-color: #121212;
+                background-color: #000C14;
+               
             }
         }
     }
     .about,.contact,.footer{
-        background-color: #181818;
+        background-color: #001829;
         color:#f5f5f5;
     }
     .projects{
         .wrapper{
             .project{
                 &:hover{
-                    background-color: rgba($color: #255, $alpha: 0.2);
+                    background-color: rgba($color: #001829, $alpha: 1);
                 }
             }
         }
@@ -61,4 +66,41 @@ p{
       
     }
 }
-
+@media screen and(max-width:$breakpoint-desktop-1440) {
+    .wrapper{
+        width: 80%;
+    }
+    h1{
+        font-size: 2.8em;
+    }
+    h2{
+        font-size: 2.4em;
+    }
+    h3{
+        font-size: 1.2em;
+    }
+    p{
+        font-size: 1em;
+        letter-spacing: .4px;
+    }
+}
+@media screen and(max-width:$breakpoint-desktop-1280) {
+    h1{
+        font-size: 2.3em;
+    }
+    h2{
+        font-size: 2em;
+    }
+    h3{
+        font-size: 1em;
+    }
+    p{
+        font-size: 1em;
+        letter-spacing: .4px;
+    }
+}
+@media screen and(max-width:$breakpoint-tablet) {
+    .wrapper{
+        width: 85%;
+    }
+}

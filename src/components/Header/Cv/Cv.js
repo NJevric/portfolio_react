@@ -11,7 +11,7 @@ const Cv = (props) => {
          ${props.open ? "cv--block" : ''} 
         `}
       >
-        <i class="far fa-times-circle" onClick={sendToParent}></i>
+        <i className="far fa-times-circle" onClick={sendToParent}></i>
         <h3 className="cv--block__headline">Choose between languages</h3>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting

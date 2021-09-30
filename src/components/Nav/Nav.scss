@@ -1,10 +1,32 @@
-.nav{
-    width: 100%;
-    background-color: #008AB8;
-    background-color: #007AA3;
-    .wrapper{
-        padding-top: 10px;
-        display: flex;
-        justify-content: space-between;
+@import "../../assets/variables/variables.scss";
+.nav {
+  width: 100%;
+  background-color: #008ab8;
+  background-color: #007aa3;
+  .wrapper {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and(max-width:$breakpoint-desktop-1280) {
+  .nav {
+    .wrapper {
+      .logo {
+        img {
+          width: 45px;
+        }
+      }
+      .nav--links {
+        .links {
+          .link {
+            a {
+              font-size: 1em;
+            }
+          }
+        }
+      }
     }
+  }
 }

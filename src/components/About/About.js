@@ -1,7 +1,18 @@
 import "./About.css";
-import avatar from "../../assets/images/me-avatar.png";
-
-const About = () => {
+import Tech from "./Tech/Tech";
+import Arch from "./Arch/Arch";
+import Tool from "./Tool/Tool";
+const About = (props) => {
+  console.log(props.technologies);
+  const techContent = props.technologies.map((tech) => (
+    <Tech key={tech.id} value={tech.value} />
+  ));
+  const archContent = props.architectures.map((arch) => (
+    <Arch key={arch.id} value={arch.value} />
+  ));
+  const toolsContent = props.tools.map((tool) => (
+    <Tool key={tool.id} value={tool.value} />
+  ));
   return (
     <div className="about">
       <div className="wrapper">
@@ -23,39 +34,24 @@ const About = () => {
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a
+            type specimen book.
           </p>
           <div className="about--info__list">
             <div className="about--info__technologies">
-              <h3>Technologies of my expertise</h3>
-              <ul>
-                <li>HTML / Bootstrap</li>
-                <li>HTML / Bootstrap</li>
-                <li>HTML / Bootstrap</li>
-                <li>HTML / Bootstrap</li>
-                <li>HTML / Bootstrap</li>
-                <li>HTML / Bootstrap</li>
-              </ul>
+              <h3>Technologies I've worked with</h3>
+              <ul>{techContent}</ul>
             </div>
             <div className="about--info__architectures">
               <h3>Architectures I am familiar with</h3>
-              <ul>
-                <li>3-Tier Architecture</li>
-                <li>MVC</li>
-                <li>Onion Architecture</li>
-              </ul>
+              <ul>{archContent}</ul>
             </div>
             <div className="about--info__architectures">
-              <h3>Architectures I am familiar with</h3>
-              <ul>
-                <li>3-Tier Architecture</li>
-                <li>MVC</li>
-                <li>Onion Architecture</li>
-              </ul>
+              <h3>Tools I'm using</h3>
+              <ul>{toolsContent}</ul>
             </div>
           </div>
         </div>

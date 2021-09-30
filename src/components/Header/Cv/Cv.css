@@ -23,6 +23,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 2;
+  z-index: 100;
 }
 
 .cv--block i {
@@ -96,5 +97,19 @@
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+
+@media screen and (max-width: 1280px) {
+  .cv--block {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cv--block {
+    width: 60%;
+    height: 40%;
+  }
 }
 /*# sourceMappingURL=Cv.css.map */

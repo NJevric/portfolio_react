@@ -1,3 +1,4 @@
+@import "../../assets/variables/variables.scss";
 .header {
   min-height: 70vh;
   background-color: #008AB8;
@@ -44,4 +45,34 @@
   to {
     background-size: 100% 100%;
   }
+}
+
+@media screen and(max-width:$breakpoint-desktop-1440) {
+  .header{
+    .wrapper{
+      .header--text{
+        padding-top: 120px;
+        
+      }
+    }
+  }
+ 
+}
+@media screen and(max-width:$breakpoint-desktop-1280) {
+  .header{
+    .wrapper{
+      .header--text{
+        padding-top: 100px;
+        p{
+          width: 75%;
+        }
+        .header--text__buttons{
+          a{
+            padding: 8px 15px;
+          }
+        }
+      }
+    }
+  }
+ 
 }

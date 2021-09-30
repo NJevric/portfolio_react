@@ -1,4 +1,4 @@
-
+@import "../../../assets/variables/variables.scss";
 .cv--block__close{
   display: none;
 }
@@ -15,6 +15,7 @@
   flex-direction: column;
   justify-content: center;
   z-index: 2;
+  z-index:100;
   i{
       position: absolute;
       right:20px;
@@ -74,4 +75,15 @@
   z-index: 1;
 }
 
-
+@media screen and(max-width:$breakpoint-desktop-1280) {
+  .cv--block {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media screen and(max-width:$breakpoint-tablet-xl) {
+  .cv--block {
+    width: 60%;
+    height: 40%;
+  }
+}

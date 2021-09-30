@@ -29,4 +29,19 @@
   border-radius: 100%;
   background-color: #003459;
 }
+
+@media screen and (max-width: 768px) {
+  .socials {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    -webkit-transform: translate(-30%, 0%);
+            transform: translate(-30%, 0%);
+  }
+  .socials .socials--list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 /*# sourceMappingURL=Socials.css.map */
