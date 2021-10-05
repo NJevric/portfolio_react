@@ -1,106 +1,182 @@
 @import "assets/variables/variables.scss";
-.link,p{
-    font-family: 'Montserrat', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
-h1,h2,h3,h4,h5,h6,a,ul{
-    font-family: 'Poppins', sans-serif;
+.link,
+p {
+  font-family: "Montserrat", sans-serif;
 }
-a{
-    text-decoration: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul {
+  font-family: "Poppins", sans-serif;
 }
-.wrapper{
-    width: 70%;
-    margin:0px auto;
+a {
+  text-decoration: none;
 }
-h1{
-    font-size: 3em;
+.wrapper {
+  width: 70%;
+  margin: 0px auto;
 }
-h2{
-    margin-top:0px;
-    font-size:2.6em;
+h1 {
+  font-size: 3em;
 }
-h3{
-    font-size: 1.4em;
+h2 {
+  margin-top: 0px;
+  font-size: 2.6em;
 }
-p{
-    letter-spacing: .5px;
-    font-size:1.05em;
+h3 {
+  font-size: 1.4em;
 }
-.app{
-    position: relative;
+p {
+  letter-spacing: 0.5px;
+  font-size: 1.05em;
 }
-.darkMode{
-    
-    .header,.nav,.projects{
-        background-color: #000C14;
-        
+.app {
+  position: relative;
+}
+.darkMode {
+  .header,
+  .nav,
+  .projects {
+    // background-color: #000c14;
+    animation: toDark 0.5s forwards;
+  }
+  .contact {
+    .wrapper {
+      .contact--info {
+        background-color: #000c14;
+      }
     }
-    .contact{
-        .wrapper{
-            .contact--info{
-                background-color: #000C14;
-               
-            }
+  }
+  .about,
+  .contact,
+  .footer {
+    animation: toDark2 0.5s forwards;
+    color: #f5f5f5;
+  }
+  .projects {
+    .wrapper {
+      .project {
+        &:hover {
+          background-color: rgba($color: #001829, $alpha: 1);
         }
+      }
     }
-    .about,.contact,.footer{
-        background-color: #001829;
-        color:#f5f5f5;
+  }
+  .socials {
+    a {
+      i {
+        color: #f5f5f5;
+      }
     }
-    .projects{
-        .wrapper{
-            .project{
-                &:hover{
-                    background-color: rgba($color: #001829, $alpha: 1);
-                }
-            }
-        }
-    }
-    .socials{
+  }
+  .nav{
+    .links{
+      .link{
         a{
-            i{
-                color:#f5f5f5;
-            }
+          &:hover{
+            color: #007aa3;
+          }
         }
-       
-      
+      }
     }
+  }
 }
+
+@keyframes toDark {
+  from {
+    background-color: #007aa3;
+  }
+  to {
+    background-color: #000c14;
+  }
+}
+@keyframes toDark2 {
+  from {
+    background-color: #f5f5f5;
+  }
+  to {
+    background-color: #001829;
+  }
+}
+
 @media screen and(max-width:$breakpoint-desktop-1440) {
-    .wrapper{
-        width: 80%;
-    }
-    h1{
-        font-size: 2.8em;
-    }
-    h2{
-        font-size: 2.4em;
-    }
-    h3{
-        font-size: 1.2em;
-    }
-    p{
-        font-size: 1em;
-        letter-spacing: .4px;
-    }
+  .wrapper {
+    width: 80%;
+  }
+  h1 {
+    font-size: 2.8em;
+  }
+  h2 {
+    font-size: 2.4em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 1em;
+    letter-spacing: 0.4px;
+  }
 }
 @media screen and(max-width:$breakpoint-desktop-1280) {
-    h1{
-        font-size: 2.3em;
-    }
-    h2{
-        font-size: 2em;
-    }
-    h3{
-        font-size: 1em;
-    }
-    p{
-        font-size: 1em;
-        letter-spacing: .4px;
-    }
+  h1 {
+    font-size: 2.3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  p {
+    font-size: 1em;
+    letter-spacing: 0.4px;
+  }
 }
 @media screen and(max-width:$breakpoint-tablet) {
-    .wrapper{
-        width: 85%;
-    }
+  .wrapper {
+    width: 85%;
+  }
+}
+
+@media screen and(max-width:$breakpoint-phone-414) {
+  .wrapper {
+    width: 90%;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 0.95em;
+  }
+}
+@media screen and(max-width:$breakpoint-phone-375) {
+  h1 {
+    font-size: 2em;
+  }
+}
+@media screen and(max-width:$breakpoint-phone-320) {
+  .wrapper {
+    width: 95%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.7em;
+  }
+
+  p {
+    font-size: 0.95em;
+  }
 }

@@ -1,7 +1,7 @@
 .header {
   min-height: 70vh;
-  background-color: #008AB8;
-  background-color: #007AA3;
+  background-color: #008ab8;
+  background-color: #007aa3;
   color: #f3f3f3;
 }
 
@@ -42,8 +42,8 @@
 
 .header .wrapper .header--text .header--text__buttons a:hover {
   color: #f3f3f3;
-  background: -webkit-gradient(linear, left top, left bottom, from(#003459), to(#003459)) #007AA3 no-repeat 0 0;
-  background: linear-gradient(#003459, #003459) #007AA3 no-repeat 0 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#003459), to(#003459)) #007aa3 no-repeat 0 0;
+  background: linear-gradient(#003459, #003459) #007aa3 no-repeat 0 0;
   background-size: 0 100%;
   border-radius: 50px;
   -webkit-animation: fill_button 0.5s linear 1 forwards;
@@ -77,6 +77,33 @@
   }
   .header .wrapper .header--text .header--text__buttons a {
     padding: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header .wrapper .header--text {
+    padding-top: 80px;
+  }
+  .header .wrapper .header--text p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .header .wrapper .header--text {
+    padding-top: 50px;
+  }
+  .header .wrapper .header--text p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header .wrapper .header--text {
+    padding-bottom: 50px;
+  }
+  .header .wrapper .header--text .header--text__buttons {
+    font-size: .9em;
   }
 }
 /*# sourceMappingURL=Header.css.map */

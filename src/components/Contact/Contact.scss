@@ -1,3 +1,4 @@
+@import "../../assets/variables/variables.scss";
 .contact {
   min-height: 90vh;
   background-color: #f5f5f5;
@@ -48,6 +49,51 @@
           transition: 0.4s ease;
         }
       }
+    }
+  }
+}
+
+@media screen and(max-width:$breakpoint-fablet) {
+  .contact{
+    .contact--info {
+      padding: 75px 0px;
+      width: 85%;
+    }
+  }
+}
+
+@media screen and(max-width:$breakpoint-phone-414) {
+  .contact{
+    .contact--info {
+      padding: 50px 0px;
+      width: 90%;
+    }
+  }
+}
+@media screen and(max-width:$breakpoint-phone-375) {
+  .contact{
+    .contact--info {
+      
+      p{
+        width: 90%;
+      }
+    }
+  }
+}
+@media screen and(max-width:$breakpoint-phone-320) {
+  .contact{
+    .contact--info {
+      background-color: transparent;
+      color:#00171f;
+      .contact--info__button{
+        a{
+          color:#00171f;
+          &:hover{
+            color: #007AA3;
+          }
+        }
+      }
+     
     }
   }
 }

@@ -87,3 +87,22 @@
     height: 40%;
   }
 }
+
+@media screen and(max-width:$breakpoint-fablet) {
+  .cv--block {
+    width: 80%;
+    height: 60%;
+  }
+}
+@media screen and(max-width:$breakpoint-phone-375) {
+  .cv--block {
+    width: 90%;
+    height: 65%;
+  }
+}
+@media screen and(max-width:$breakpoint-phone-320) {
+  .cv--block {
+    width: 95%;
+    height: 65%;
+  }
+}

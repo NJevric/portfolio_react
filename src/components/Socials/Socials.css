@@ -44,4 +44,19 @@
     display: flex;
   }
 }
+
+@media screen and (max-width: 414px) {
+  .socials {
+    bottom: 35px;
+    left: 50%;
+    -webkit-transform: translate(-60%, 0%);
+            transform: translate(-60%, 0%);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .socials {
+    bottom: 10px;
+  }
+}
 /*# sourceMappingURL=Socials.css.map */

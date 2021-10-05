@@ -64,4 +64,37 @@
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
+
+@media screen and (max-width: 540px) {
+  .contact .contact--info {
+    padding: 75px 0px;
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .contact .contact--info {
+    padding: 50px 0px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contact .contact--info p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .contact .contact--info {
+    background-color: transparent;
+    color: #00171f;
+  }
+  .contact .contact--info .contact--info__button a {
+    color: #00171f;
+  }
+  .contact .contact--info .contact--info__button a:hover {
+    color: #007AA3;
+  }
+}
 /*# sourceMappingURL=Contact.css.map */

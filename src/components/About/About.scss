@@ -61,3 +61,44 @@
     }
   }
 }
+
+@media screen and(max-width:$breakpoint-fablet) {
+  .about{
+    .about--info{
+     .about--info__list{
+      flex-direction: column;
+      .about--info__technologies,
+      .about--info__architectures{
+         h3{
+           width: 100%;
+           text-align: left;
+          height: 25px;
+         }
+         
+       }
+     }
+    
+    }
+  }
+}
+
+@media screen and(max-width:$breakpoint-phone-414) {
+  .about{
+    padding: 50px 0px;
+    .about--info{
+     .about--info__list{
+      flex-direction: column;
+      .about--info__technologies,
+      .about--info__architectures{
+         h3{
+           width: 100%;
+           text-align: left;
+          height: 25px;
+         }
+         
+       }
+     }
+    
+    }
+  }
+}

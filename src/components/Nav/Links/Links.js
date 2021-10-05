@@ -3,7 +3,7 @@ import "./Links.css";
 import Link from "./Link/Link";
 
 const Links = (props) => {
-
+  // DARK MODE
   let [clickedValue, setClickedValue] = useState(false);
 
   const darkMode = () => {
@@ -14,20 +14,33 @@ const Links = (props) => {
   };
   const c = () => {
     props.onB(clickedValue);
-  }
+  };
+
   const contentDark = (
-        <i className={"far fa-moon"} onClick={() => {darkMode(); c();}}></i>
+    <i
+      className={"far fa-moon"}
+      onClick={() => {
+        darkMode();
+        c();
+      }}
+    ></i>
   );
   const contentLight = (
-    <i className={`far fa-moon`} onClick={() => {lightMode(); c();}}></i>
+    <i
+      className={`far fa-moon`}
+      onClick={() => {
+        lightMode();
+        c();
+      }}
+    ></i>
   );
   let content = contentDark;
 
   if (clickedValue === true) {
     content = contentLight;
-  
   }
-
+  
+  //DYNAMIC LINKS
   let linksContent = props.links.map((link) => (
     <Link key={link.id} href={link.href} text={link.text} />
   ));

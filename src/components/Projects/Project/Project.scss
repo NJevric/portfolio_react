@@ -1,6 +1,6 @@
 @import "../../../assets/variables/variables.scss";
 .project {
-  padding: 70px 20px;
+  padding: 50px 20px;
   // margin:50px 0px;
   display: flex;
   justify-content: space-between;
@@ -90,4 +90,48 @@
       }
     }
    
+}
+
+@media screen and(max-width:$breakpoint-fablet) {
+  .project{
+    flex-direction: column;
+    padding: 40px 30px;
+    
+    .project--image{
+      width:100%;
+     
+    }
+    .project--info{
+      width: 100%;
+    
+      h3{
+        margin-top: 20px;
+      }
+    }
+  }
+ 
+}
+@media screen and(max-width:$breakpoint-phone-414) {
+  .project{
+    padding: 0px;
+    margin:40px 0px;
+    .project--image{
+      width:100%;
+      margin:0px auto;
+    }
+    .project--info{
+      width: 100%;
+      margin: 0px auto;
+      padding: 20px 5px 30px 5px;
+      h3{
+        margin-top: 20px;
+        font-size: 1.5em;
+      
+      }
+      p{
+        font-size: .95em;
+      }
+    }
+  }
+ 
 }

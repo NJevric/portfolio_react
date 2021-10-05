@@ -1,26 +1,32 @@
-import './Project.css'
-import slika from'../../../assets/images/projects/laravel_blog.png';
+import "./Project.css";
 
-const Project = () => {
-    return(
-        <div className="project">
-            <img src={slika} alt="aa" className="project--image"/>
-            <div className="project--info">
-                <h3>Laravel Blog</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-             
-                <div className="project--info__tech">
-                    <ul>
-                        <li>Laravel</li>
-                        <li>MySql</li>
-                    </ul>
-                </div>
-                <div className="project--info__links">
-                    <a href="">Github repo</a>
-                    <a href="">Live Demo</a>
-                </div>
-            </div>
+const Project = (props) => {
+  return (
+    <div className="project">
+      <img
+        src={`projectImages/${props.project.img.src}`}
+        alt={props.project.img.alt}
+        className="project--image"
+      />
+      <div className="project--info">
+        <h3>{props.project.headline}</h3>
+        <p>
+          {props.project.desc}
+        </p>
+
+        <div className="project--info__tech">
+          <ul>
+            {props.project.tech.map(t=>(
+                <li>{t}</li>
+            ))}
+          </ul>
         </div>
-    );
-}
+        <div className="project--info__links">
+          <a href={props.project.buttons.github}>Github repo</a>
+          <a href={props.project.buttons.demo}>Live Demo</a>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default Project;

@@ -7,7 +7,7 @@ const Link = (props) => {
         <a href={props.href}>{props.text}</a>
       </li>
     </div>
-  );
+  )
 };
 
 export default Link;

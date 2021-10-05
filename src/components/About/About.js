@@ -14,7 +14,7 @@ const About = (props) => {
     <Tool key={tool.id} value={tool.value} />
   ));
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="wrapper">
         <div className="about--info">
           <h2>About Me</h2>

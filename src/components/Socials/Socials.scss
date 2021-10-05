@@ -40,3 +40,20 @@
         }
     }
   }
+
+  @media screen and(max-width:$breakpoint-phone-414) {
+  
+    .socials{
+      
+        bottom:35px;
+        left:50%;
+        transform: translate(-60%,0%);
+      
+    }
+  }
+  @media screen and(max-width:$breakpoint-phone-375) {
+    .socials{
+        bottom: 10px;
+    }
+  }
+  

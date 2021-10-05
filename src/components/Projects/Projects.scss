@@ -1,4 +1,4 @@
-
+@import "../../assets/variables/variables.scss";
 .projects{
     min-height: 100vh;
     background-color: #007AA3;
@@ -21,3 +21,17 @@
     }
 }
 
+@media screen and(max-width:$breakpoint-fablet) {
+    .projects{
+        p{
+            width: 100%;
+        }
+    }
+   
+  }
+  @media screen and(max-width:$breakpoint-phone-414) {
+    .projects{
+        padding:50px 0px;
+    }
+   
+  }

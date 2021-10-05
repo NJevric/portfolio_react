@@ -1,8 +1,8 @@
 @import "../../assets/variables/variables.scss";
 .header {
   min-height: 70vh;
-  background-color: #008AB8;
-  background-color: #007AA3;
+  background-color: #008ab8;
+  background-color: #007aa3;
   color: #f3f3f3;
   .wrapper {
     .header--text {
@@ -31,7 +31,7 @@
 
           &:hover {
             color: #f3f3f3;
-            background: linear-gradient(#003459, #003459) #007AA3 no-repeat 0 0;
+            background: linear-gradient(#003459, #003459) #007aa3 no-repeat 0 0;
             background-size: 0 100%;
             border-radius: 50px;
             animation: fill_button 0.5s linear 1 forwards;
@@ -48,31 +48,66 @@
 }
 
 @media screen and(max-width:$breakpoint-desktop-1440) {
-  .header{
-    .wrapper{
-      .header--text{
+  .header {
+    .wrapper {
+      .header--text {
         padding-top: 120px;
-        
       }
     }
   }
- 
 }
 @media screen and(max-width:$breakpoint-desktop-1280) {
-  .header{
-    .wrapper{
-      .header--text{
+  .header {
+    .wrapper {
+      .header--text {
         padding-top: 100px;
-        p{
+        p {
           width: 75%;
         }
-        .header--text__buttons{
-          a{
+        .header--text__buttons {
+          a {
             padding: 8px 15px;
           }
         }
       }
     }
   }
- 
 }
+@media screen and(max-width:$breakpoint-fablet) {
+  .header {
+    .wrapper {
+      .header--text {
+        padding-top: 80px;
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:$breakpoint-phone-414) {
+  .header {
+    .wrapper {
+      .header--text {
+        padding-top: 50px;
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width:$breakpoint-phone-375) {
+  .header {
+    .wrapper {
+      .header--text {
+        padding-bottom: 50px;
+        .header--text__buttons{
+          font-size: .9em;
+        }
+      }
+    }
+  }
+}
+

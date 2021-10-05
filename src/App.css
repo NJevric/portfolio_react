@@ -1,9 +1,21 @@
-.link, p {
-  font-family: 'Montserrat', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, a, ul {
-  font-family: 'Poppins', sans-serif;
+.link,
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul {
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -29,7 +41,7 @@ h3 {
 }
 
 p {
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   font-size: 1.05em;
 }
 
@@ -37,16 +49,22 @@ p {
   position: relative;
 }
 
-.darkMode .header, .darkMode .nav, .darkMode .projects {
-  background-color: #000C14;
+.darkMode .header,
+.darkMode .nav,
+.darkMode .projects {
+  -webkit-animation: toDark 0.5s forwards;
+          animation: toDark 0.5s forwards;
 }
 
 .darkMode .contact .wrapper .contact--info {
-  background-color: #000C14;
+  background-color: #000c14;
 }
 
-.darkMode .about, .darkMode .contact, .darkMode .footer {
-  background-color: #001829;
+.darkMode .about,
+.darkMode .contact,
+.darkMode .footer {
+  -webkit-animation: toDark2 0.5s forwards;
+          animation: toDark2 0.5s forwards;
   color: #f5f5f5;
 }
 
@@ -56,6 +74,46 @@ p {
 
 .darkMode .socials a i {
   color: #f5f5f5;
+}
+
+.darkMode .nav .links .link a:hover {
+  color: #007aa3;
+}
+
+@-webkit-keyframes toDark {
+  from {
+    background-color: #007aa3;
+  }
+  to {
+    background-color: #000c14;
+  }
+}
+
+@keyframes toDark {
+  from {
+    background-color: #007aa3;
+  }
+  to {
+    background-color: #000c14;
+  }
+}
+
+@-webkit-keyframes toDark2 {
+  from {
+    background-color: #f5f5f5;
+  }
+  to {
+    background-color: #001829;
+  }
+}
+
+@keyframes toDark2 {
+  from {
+    background-color: #f5f5f5;
+  }
+  to {
+    background-color: #001829;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -73,7 +131,7 @@ p {
   }
   p {
     font-size: 1em;
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
   }
 }
 
@@ -89,13 +147,49 @@ p {
   }
   p {
     font-size: 1em;
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .wrapper {
     width: 85%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .wrapper {
+    width: 90%;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 0.95em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    width: 95%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.7em;
+  }
+  p {
+    font-size: 0.95em;
   }
 }
 /*# sourceMappingURL=App.css.map */
