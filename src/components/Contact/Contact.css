@@ -14,6 +14,7 @@
           transform: translate(-50%, -50%);
   width: 70%;
   padding: 150px 0px;
+  border-radius: 10px;
 }
 
 .contact .contact--info h2 {
@@ -85,7 +86,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 320px) {
   .contact .contact--info {
     background-color: transparent;
     color: #00171f;

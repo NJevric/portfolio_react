@@ -1,32 +1,46 @@
 import { useState } from "react";
 import "./Header.css";
 import Cv from "./Cv/Cv";
-const Header = (props) => {
+import ScrollAnimation from "react-animate-on-scroll";
 
-  const[openedValue,setOpenedValue] = useState(false);
-  const openHandler = () =>{
-    console.log('open');
+
+const Header = (props) => {
+  const [openedValue, setOpenedValue] = useState(false);
+  const openHandler = (e) => {
+    e.preventDefault();
+
     setOpenedValue(true);
-  }
+  };
   const closedHandler = (data) => {
-    console.log(data);
     setOpenedValue(false);
-  }
+  };
   return (
     <div className="header">
       <div className="wrapper">
         <div className="header--text">
+        <ScrollAnimation
+            initiallyVisible={false}
+            animateOnce={true}
+            animateIn="fadeInUp"
+            duration={2}
+            offset={250}
+          >
           <h1>Hello World! I'm Nikola And I Build Websites</h1>
           <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,I'm a web developer &amp; CS Enthusiast based in Belgrade, Serbia.
+            Welcome to my portfolio website. I'm a web developer &amp; CS
+            Enthusiast based in Belgrade, Serbia. If I have your curiosity you
+            can start to scroll and explore about me and my work.
           </p>
           <div className="header--text__buttons">
-            <a href="#">Get in touch</a>
-            <a href="#" onClick={openHandler}>Download CV</a>
+            <a href="#contact">Get in touch</a>
+            <a href="#" onClick={openHandler}>
+              View Resume
+            </a>
           </div>
+          </ScrollAnimation>
         </div>
       </div>
-      <Cv open={openedValue} onOpen={closedHandler}/>
+      <Cv open={openedValue} onOpen={closedHandler} />
     </div>
   );
 };

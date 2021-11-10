@@ -2,6 +2,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+
 .link,
 p {
   font-family: "Montserrat", sans-serif;
@@ -146,9 +148,7 @@ p {
 }
 
 @media screen and(max-width:$breakpoint-phone-414) {
-  .wrapper {
-    width: 90%;
-  }
+  
   h1 {
     font-size: 2.2em;
   }
@@ -161,8 +161,15 @@ p {
   }
 }
 @media screen and(max-width:$breakpoint-phone-375) {
+  
   h1 {
     font-size: 2em;
+  }
+}
+@media screen and(max-width:$breakpoint-phone-360) {
+  
+  .wrapper{
+    width: 90%;
   }
 }
 @media screen and(max-width:$breakpoint-phone-320) {

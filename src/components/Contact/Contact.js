@@ -1,20 +1,31 @@
 import "./Contact.css";
+import ScrollAnimation from "react-animate-on-scroll";
+
 const Contact = () => {
   return (
     <div className="contact" id="contact">
       <div className="wrapper">
         <div className="contact--info">
-          <h2>Want to work with me?</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
-          <div className="contact--info__button">
-            <a href="#">Message me<div className="line"></div></a>
-            
-          </div>
+          <ScrollAnimation
+            initiallyVisible={false}
+            animateOnce={true}
+            animateIn="fadeInUp"
+            duration={1.5}
+            offset={150}
+          >
+            <h2>Want to work with me?</h2>
+            <p>
+              My experience rate wants to rise and you want to upgrade this
+              page?
+              <br />
+              Don't hesitate, contact me.
+            </p>
+            <div className="contact--info__button">
+              <a href="mailto:njevric9@gmail.com">
+                Message me<div className="line"></div>
+              </a>
+            </div>
+          </ScrollAnimation>
         </div>
       </div>
     </div>

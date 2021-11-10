@@ -1,22 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Nav.css";
 import Logo from "./Logo/Logo";
 import Links from "./Links/Links";
 import useWindowDimensions from "./useWindowDimensions";
+
 const Nav = (props) => {
-  //HAMBURGER MENU
-  const { height, width } = useWindowDimensions();
-
-  const [clickedHamburger, setClickedHamburgerValue] = useState(false);
-
-  const onClickHamburgerHandler = () => {
-    setClickedHamburgerValue(true);
-  };
-
-  const exitMenu = () => {
-    setClickedHamburgerValue(false);
-  };
-  //END HAMBURGER MENU
   const links = [
     {
       id: 1,
@@ -39,19 +27,36 @@ const Nav = (props) => {
       text: "Contact",
     },
   ];
+  const { width } = useWindowDimensions();
+
+  const [clickedHamburger, setClickedHamburgerValue] = useState(false);
+
+  const onClickHamburgerHandler = () => {
+    setClickedHamburgerValue(true);
+  };
+
+  const exitMenu = () => {
+    setClickedHamburgerValue(false);
+  };
 
   const b = (data) => {
     props.onA(data);
   };
 
   let linksContent = <Links links={links} onB={b} />;
+
   if (width <= 768) {
-    linksContent = (
-      <i
-        className="fas fa-bars hamburger"
-        onClick={onClickHamburgerHandler}
-      ></i>
-    );
+    if (clickedHamburger === false) {
+      linksContent = (
+        <div className="openMenu closeMenu">
+          <i
+            className="fas fa-bars hamburger"
+            onClick={onClickHamburgerHandler}
+          ></i>
+        </div>
+      );
+    }
+
     if (clickedHamburger === true) {
       linksContent = (
         <div className="openMenu">
@@ -64,17 +69,8 @@ const Nav = (props) => {
         </div>
       );
     }
-    if (clickedHamburger === false) {
-      linksContent = (
-        <div className="openMenu closeMenu">
-          <i
-            className="fas fa-bars hamburger"
-            onClick={onClickHamburgerHandler}
-          ></i>
-        </div>
-      );
-    }
   }
+
   return (
     <div className={`nav`}>
       <div className="wrapper">

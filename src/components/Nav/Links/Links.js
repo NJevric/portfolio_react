@@ -3,17 +3,21 @@ import "./Links.css";
 import Link from "./Link/Link";
 
 const Links = (props) => {
-  // DARK MODE
+
   let [clickedValue, setClickedValue] = useState(false);
 
   const darkMode = () => {
     setClickedValue(true);
+    localStorage.setItem('moon',1);
   };
   const lightMode = () => {
     setClickedValue(false);
+    localStorage.removeItem('moon');
   };
+
   const c = () => {
-    props.onB(clickedValue);
+    props.onB(localStorage.getItem('moon'));
+    
   };
 
   const contentDark = (
@@ -36,10 +40,14 @@ const Links = (props) => {
   );
   let content = contentDark;
 
-  if (clickedValue === true) {
-    content = contentLight;
-  }
-  
+  // if (localStorage.getItem('moon') === true) {
+  //   content = contentLight;
+  // }
+  // if(localStorage.getItem('moon') === false){
+  //   content = contentDark;
+  // }
+  localStorage.getItem('moon') ? content = contentLight : content = contentDark;
+
   //DYNAMIC LINKS
   let linksContent = props.links.map((link) => (
     <Link key={link.id} href={link.href} text={link.text} />

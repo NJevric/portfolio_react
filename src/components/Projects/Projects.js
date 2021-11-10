@@ -1,9 +1,12 @@
 import "./Projects.css";
 import Project from "./Project/Project";
+
 const Projects = (props) => {
+  
   const projects = props.projects.map((project) => (
-    <Project key={project.id} project={project} />
+    <Project project={project} key={project.id}/>
   ));
+
   return (
     <div className="projects" id="projects">
       <div className="wrapper">
@@ -11,7 +14,7 @@ const Projects = (props) => {
         <p>
           Here are some of my latest and most proudest projects I've done. If
           you want to checkout all of them feel free to visit my{" "}
-          <a href="https://github.com/NJevric"> github page</a>
+          <a href="https://github.com/NJevric" target="_blank" rel="noopener noreferrer"> github page</a>
         </p>
         {projects}
       </div>

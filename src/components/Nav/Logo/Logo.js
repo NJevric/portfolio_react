@@ -5,7 +5,7 @@ import logo from '../../../assets/images/logo-n2.png';
 const Logo = () => {
     return(
         <div className="logo">
-            <a href=""><img src={logo} alt="Nikola Jevric"/></a>
+            <a href="index.html"><img src={logo} alt="Nikola Jevric"/></a>
         </div>
     );
 }
