@@ -2,7 +2,9 @@
   display: flex;
 }
 .nav--links {
+  font-size: 1.15em;
   display: flex;
+  animation: scrollUpLinks 0.3s forwards;
   i {
     color: #f5f5f5;
     margin-top: 21px;
@@ -13,6 +15,29 @@
   }
 }
 
-.nav--links__responsive{
+.nav--links__responsive {
   background: red;
+}
+
+.nav--links__scroll {
+  animation: scrollDownLinks 0s forwards;
+}
+
+@keyframes scrollDownLinks {
+  from {
+    font-size: 1.15em;
+  }
+  to {
+    font-size: 1.05em;
+
+  }
+}
+
+@keyframes scrollUpLinks {
+  from {
+    margin-top: -5px;
+  }
+  to {
+    margin-top: 0px;
+  }
 }

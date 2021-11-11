@@ -25,7 +25,7 @@ const Header = (props) => {
             duration={2}
             offset={250}
           >
-          <h1>Hello World! I'm Nikola And I Build Websites</h1>
+          <h1>Hi, I'm Nikola Jevric And I Build Websites</h1>
           <p>
             Welcome to my portfolio website. I'm a web developer &amp; CS
             Enthusiast based in Belgrade, Serbia. If I have your curiosity you

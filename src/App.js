@@ -188,7 +188,7 @@ function App() {
       id="home"
     >
       <ScrollAnimation animateIn="fadeIn" duration={1.5} animateOnce={true}>
-        <Nav onA={a} />
+        <Nav onA={a} className="navClass"/>
         <Header className="header" id="header" />
         <About
           className="about"

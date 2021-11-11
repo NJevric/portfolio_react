@@ -1,7 +1,11 @@
 .nav {
   width: 100%;
-  background-color: #008ab8;
   background-color: #007aa3;
+  position: fixed;
+  top: 0%;
+  z-index: 102;
+  -webkit-animation: scrollUpAnimation .6s forwards;
+          animation: scrollUpAnimation .6s forwards;
 }
 
 .nav .wrapper {
@@ -16,11 +20,11 @@
 
 .hamburger {
   color: #f5f5f5;
-  font-size: 1.5em;
-  margin-top: -2px;
-  background-color: #003d52;
-  padding: 7px;
-  border-radius: 2px;
+  font-size: 1.3em;
+  margin-top: 1px;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  padding: 6px;
 }
 
 .rotateHamburger {
@@ -38,7 +42,7 @@
   height: 100vh;
   right: 0%;
   top: 0%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .openMenu .close {
@@ -67,7 +71,7 @@
           flex-direction: column;
   position: absolute;
   right: 50%;
-  top: 35%;
+  top: 30%;
   text-align: center;
   -webkit-transform: translate(50%, 0%);
           transform: translate(50%, 0%);
@@ -101,6 +105,47 @@
   position: absolute;
   top: 15px;
   right: 30px;
+}
+
+.nav__scroll {
+  -webkit-animation: scrollDownAnimation .3s forwards;
+          animation: scrollDownAnimation .3s forwards;
+}
+
+@-webkit-keyframes scrollDownAnimation {
+  from {
+    background-color: #007aa3;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes scrollDownAnimation {
+  from {
+    background-color: #007aa3;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@-webkit-keyframes scrollUpAnimation {
+  from {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  to {
+    background-color: #007aa3;
+  }
+}
+
+@keyframes scrollUpAnimation {
+  from {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  to {
+    background-color: #007aa3;
+  }
 }
 
 @-webkit-keyframes openMenu {

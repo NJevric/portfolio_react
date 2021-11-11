@@ -76,12 +76,25 @@
 @media screen and (max-width: 414px) {
   .contact .contact--info {
     padding: 50px 0px;
+    width: 85%;
+  }
+  .contact .contact--info h2 {
+    font-size: 1.6em;
+  }
+  .contact .contact--info p {
     width: 90%;
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 375px) {
   .contact .contact--info p {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .contact .contact--info {
     width: 90%;
   }
 }

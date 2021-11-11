@@ -5,9 +5,12 @@
 }
 
 .nav--links {
+  font-size: 1.15em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: scrollUpLinks 0.3s forwards;
+          animation: scrollUpLinks 0.3s forwards;
 }
 
 .nav--links i {
@@ -22,5 +25,46 @@
 
 .nav--links__responsive {
   background: red;
+}
+
+.nav--links__scroll {
+  -webkit-animation: scrollDownLinks 0s forwards;
+          animation: scrollDownLinks 0s forwards;
+}
+
+@-webkit-keyframes scrollDownLinks {
+  from {
+    font-size: 1.15em;
+  }
+  to {
+    font-size: 1.05em;
+  }
+}
+
+@keyframes scrollDownLinks {
+  from {
+    font-size: 1.15em;
+  }
+  to {
+    font-size: 1.05em;
+  }
+}
+
+@-webkit-keyframes scrollUpLinks {
+  from {
+    margin-top: -5px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+@keyframes scrollUpLinks {
+  from {
+    margin-top: -5px;
+  }
+  to {
+    margin-top: 0px;
+  }
 }
 /*# sourceMappingURL=Links.css.map */

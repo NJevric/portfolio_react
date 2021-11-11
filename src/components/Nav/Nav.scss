@@ -1,9 +1,12 @@
 @import "../../assets/variables/variables.scss";
 .nav {
   width: 100%;
-  background-color: #008ab8;
+  // background-color: #008ab8;
   background-color: #007aa3;
-
+  position: fixed;
+  top:0%;
+  z-index: 102;
+  animation: scrollUpAnimation .6s forwards;
   .wrapper {
     padding-top: 10px;
     display: flex;
@@ -12,11 +15,12 @@
 }
 .hamburger {
   color: #f5f5f5;
-  font-size: 1.5em;
-  margin-top: -2px;
-  background-color: #003d52;
-  padding: 7px;
-  border-radius: 2px;
+  font-size: 1.3em;
+  margin-top: 1px;
+  border:1px solid #f5f5f5;
+  border-radius: 5px;
+  padding: 6px;
+  
   
 }
 .rotateHamburger{
@@ -31,7 +35,7 @@
   height: 100vh;
   right: 0%;
   top: 0%;
-  background-color: rgba($color: #000000, $alpha: 0.8);
+  background-color: rgba($color: #000000, $alpha: .85);
   .close {
     position: absolute;
     top: 20px;
@@ -48,7 +52,7 @@
     flex-direction: column;
     position: absolute;
     right: 50%;
-    top: 35%;
+    top: 30%;
     text-align: center;
     transform: translate(50%, 0%);
     font-size: 1.2em;
@@ -71,6 +75,27 @@
     position: absolute;
     top: 15px;
     right: 30px;
+    
+  }
+}
+.nav__scroll{
+  animation: scrollDownAnimation .3s forwards;
+  
+}
+@keyframes scrollDownAnimation{
+  from{
+    background-color: #007aa3;
+  }
+  to{
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+}
+@keyframes scrollUpAnimation{
+  from{
+    background-color: rgba($color: #000000, $alpha: 0.8);
+  }
+  to{
+    background-color: #007aa3;
   }
 }
 @keyframes openMenu {

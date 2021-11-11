@@ -2,5 +2,28 @@
     img{
         width: 50px;
         border-radius:5px;
+      
+    }
+    animation: scrollUpLogo .3s forwards;
+}
+.logo__scroll{
+    animation: scrollDownLogo .3s forwards;
+}
+
+@keyframes scrollDownLogo{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(.75);
+    }
+}
+
+@keyframes scrollUpLogo{
+    from{
+        transform: scale(.75);
+    }
+    to{
+        transform: scale(1);
     }
 }
